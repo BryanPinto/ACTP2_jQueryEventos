@@ -12,4 +12,9 @@ $(document).ready(function(){
 	$("a[href='#']").on("click", function(e){
 		e.preventDefault();
 	});
+	//agregar y quitar clase a boton seguir de las cartas
+	$(".card__follow-btn").on("click", function(e){
+		$(this).toggleClass("card__follow-btn--following");
+		e.stopPropagation();
+	});
 });
