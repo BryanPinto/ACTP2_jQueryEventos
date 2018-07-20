@@ -15,7 +15,11 @@ $(document).ready(function(){
 		e.stopPropagation();
 	});
 	//mostrar imagen al seleccionarla de la lista despleglable
-	$("#image").on("change", function(){
+	$("#image").on("change", function(e){
 		$(".create__image img").attr("src", "assets/images/squared/" + $(this).val());
+	});
+	//mostrar imagen del autor seleccionado
+	$("#author").on("change", function(){
+		$(".create__profile img").attr("src", "assets/images/profiles/" + $(this).val());
 	});
 });
